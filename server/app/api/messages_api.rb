@@ -5,7 +5,7 @@ class MessagesAPI < ApplicationAPI
             requires :query, type: String, desc: 'Query string'
         end
         get do
-            params[:query]
+            OpenAiCommand.do_something
         end
 
         desc "create a message" 

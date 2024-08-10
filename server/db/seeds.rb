@@ -7,3 +7,11 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+require 'yaml'
+
+words = YAML.load_file(File.join(__dir__, 'words.yml'))['words']
+words.each do |word|
+    # puts "word #{}"
+  Word.find_or_create_by!(name: word, proficiency: 0)
+end

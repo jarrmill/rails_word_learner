@@ -3,4 +3,6 @@ class API < ApplicationAPI
   mount QueriesAPI
   mount MessagesAPI
   mount ChatsAPI
+  mount WordsAPI
+  mount QuestionsAPI
 end
